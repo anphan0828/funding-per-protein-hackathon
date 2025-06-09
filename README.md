@@ -1,7 +1,7 @@
 # funding-per-protein-hackathon
 
 
-*   [Function COSI - Funding per Annotated Protein] - [ISMB 2025]
+*   Function COSI - Funding per Annotated Protein - ISMB 2025
 
 ## Problem Statement
 Quantifying the financial investment in specific areas of biomedical research is challenging. While NIH funding is extensive, directly attributing grant dollars to individual proteins studied is non-trivial. Approximating the dollar amount of funding allocated to the proteins help us to:
@@ -47,20 +47,20 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
         *  Note: Grants might span multiple years, yearly budget amount might not be available.
     *   **Publication-to-Protein (P2Prot) - Equal Split**
         *   `Amount_per_Protein_from_Publication = Amount_per_Publication / Number_of_Unique_Proteins_in_Publication`
-    *   Better apportionment approaches are welcome!
+    *   Better apportionment approaches for both G2P and P2Prot links are welcome!
 
 4.  **Aggregation & Output:**
-    *   For each protein, sum the `Amount_per_Protein_from_Publication` across all publications it's associated with, for each G2P approach. This gives the total funding per protein.
+    *   For each protein, sum the `Amount_per_Protein_from_Publication` across all publications it is associated with. This gives the total funding per protein.
     *   For the time-series visualization, aggregate the funding per protein per publication year (from 2010 onwards). The "publication year" will be the primary temporal anchor for the visualization.
 
 ## Deliverables
 
 1.  **Dataset of Funding per Protein:**
     *   A CSV file (or similar structured format) with columns such as:
-        *   `Protein_ID` (e.g., UniProt Accession)
-        *   `Gene_Symbol` (if available)
-        *   `Total_Funding_Approach1` (e.g., using G2P Equal Split + P2Prot Equal Split)
-        *   `Total_Funding_Approach2` (e.g., using G2P Yearly Split + P2Prot Equal Split)
+        *   `Protein_ID` (UniProtKB ID)
+        *   `Gene_Symbol` (for better recognition)
+        *   `Total_Funding_Approach1` 
+        *   `Total_Funding_Approach2` (if a second approach is developed)
         *   `Funding_by_Year_YYYY` (columns for each year from 2010, e.g., `Funding_2010`, `Funding_2011`, ..., `Funding_2023`)
 
 2.  **Simple Website for Tracking Funding Over Time:**
