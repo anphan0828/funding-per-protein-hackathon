@@ -70,6 +70,36 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
         *   Upon search, display a line chart showing the estimated funding amount attributed to that protein for each year from 2010 onwards.
         *   Option to select which funding apportionment approach's results are displayed (if multiple are fully implemented).
 
+## Evaluation Criteria
+
+Submissions will be evaluated on:
+
+- **Integration of multiple data types** (Hi-C, expression, annotations, etc.)
+- **Clarity**, **documentation**, and **reproducibility** of your analysis
+- **Creativity** in website interface
+
+**Bonus points for**:
+
+- Additional funding database resources (e.g., NSF)
+- Creative funding apportionment approaches
+- Reusable pipeline code
+
+---
+
+## Repository Structure
+
+```text
+.
+├── data/             # Input data: expression, Hi-C, annotations
+├── notebooks/        # Jupyter or R notebooks
+├── scripts/          # Python/R scripts for analysis
+├── results/          # Output files, figures
+├── website/          # Website files (html or Streamlis/Flask/Dash app)
+├── README.md         # This readme file
+└── requirements.txt  # Software dependencies
+```
+
+
 ## Requirements
 
 1.  **Prerequisites:**
@@ -79,9 +109,9 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 
 2.  **Setup:**
 
-3.  **Data Processing and Storage**
+3.  **Data Processing and Storage:**
 
-4.  **Website Hosting**
+4.  **Website Hosting:**
 
 
 ## Future Work
