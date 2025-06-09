@@ -23,7 +23,7 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 ## Data Sources
 1.  **NIH RePORTER:**
     *   Source: National Institutes of Health (NIH)
-    *   Content: Grant information (award amounts, project periods, PIs), and associated publications (PMIDs).
+    *   Content: Grant information (award amounts, project periods, PIs), and associated publications (PMIDs). Here we focus on R01 grants.
     *   Access: Download [list of projects](https://reporter.nih.gov/exporter/projects) and [link tables](https://reporter.nih.gov/exporter/linktables) from NIH RePORTER and/or use [API](https://api.reporter.nih.gov/) to retrieve grant projects and associated publications.
 2.  **Gene Ontology Annotation (GAF) files:**
     *   Source: Gene Ontology Consortium members (e.g., UniProt-GOA, MGI, SGD).
