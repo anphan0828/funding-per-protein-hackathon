@@ -24,7 +24,7 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 1.  **NIH RePORTER:**
     *   Source: National Institutes of Health (NIH)
     *   Content: Grant information (award amounts, project periods, PIs), and associated publications (PMIDs).
-    *   Access: Bulk downloads and/or API (e.g., `https://api.reporter.nih.gov/`).
+    *   Access: Download [list of projects](https://reporter.nih.gov/exporter/projects) and [link tables](https://reporter.nih.gov/exporter/linktables) from NIH RePORTER and/or use [API](https://api.reporter.nih.gov/) to retrieve grant projects and associated publications.
 2.  **Gene Ontology Annotation (GAF) files:**
     *   Source: Gene Ontology Consortium members (e.g., UniProt-GOA, MGI, SGD).
     *   Content: Protein annotations linking proteins (e.g., UniProt IDs) to GO terms, supported by evidence codes and PMIDs. We will focus on experimental annotations as these are always accompanied by their source PubMed articles.
@@ -32,12 +32,12 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 
 ## Methodology
 1.  **Data Acquisition & Preprocessing:**
-    *   Fetch grant data from NIH RePORTER. Extract relevant fields: Grant ID, Fiscal Year, Award Amount, Project Start/End Dates, associated PMIDs.
+    *   Fetch grant data from NIH RePORTER "Projects" tab. Extract relevant fields: Grant ID, Fiscal Year, Award Amount, Project Start/End Dates, associated PMIDs.
     *   Download GAF files for relevant organisms (e.g., human, mouse). Parse GAF files to extract (Protein ID, PMID, Evidence Code) and filter for experimental annotations.
     *   Clean and standardize data (e.g., filter publications based on starting year, use UniProtID as primary identifier).
 
 2.  **Linking Grants to Proteins:**
-    *   **Grant-to-Publication:** Use PMIDs from NIH RePORTER to link grants to publications.
+    *   **Grant-to-Publication:** Use PMIDs from NIH RePORTER "Link Tables" tab to link grants to publications.
     *   **Publication-to-Protein:** Use PMIDs from GAF files to link publications to specific proteins.
     *   Combine these to create a Grant -> Publication -> Protein linkage.
 
