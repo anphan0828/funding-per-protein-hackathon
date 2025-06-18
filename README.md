@@ -26,11 +26,13 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
     *   Content: Grant information (core project number, project fiscal year, direct cost amount), and associated publications (PMIDs). Here we focus on R01 grants (grants supporting a discrete, specified, circumscribed project to be performed by the named investigator(s) in an area representing his or her specific interest and competencies).
     *   Access: Download [list of projects](https://reporter.nih.gov/exporter/projects) and [link tables](https://reporter.nih.gov/exporter/linktables) from NIH RePORTER and/or use [API](https://api.reporter.nih.gov/) to retrieve grant projects and associated publications.
     *   Example grant information (taken from file `FY 2024 RePORTER Project Data`):
+      
 | **CORE_PROJECT_NUM**   | **FY**     | **DIRECT_COST_AMT** |
 |--------------|-----------|------------|
 | R01AG072301 | 2024      | 107164        |
 | R01DE029074 |  2024 | 513710       |
     *   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
+    
 | **PROJECT_NUMBER**   | **PMID**    |
 |--------------|-----------|
 | R01AG072301 | 37880106   |
@@ -43,7 +45,8 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
     *   Source: Gene Ontology Consortium members (e.g., UniProt-GOA, MGI, SGD).
     *   Content: Protein annotations linking proteins (e.g., UniProt IDs) to GO terms, supported by evidence codes and PMIDs. We will focus on experimental annotations as these are always accompanied by their source PubMed articles and on human proteins.
     *   Access: Publicly available FTP sites hosted by EBI (`ftp.ebi.ac.uk/pub/databases/GO/goa/`) or Gene Ontology Data Archive (`https://release.geneontology.org/`)
-    *   Example data (taken from `goa_human.gaf` version : 
+    *   Example data (taken from `goa_human.gaf` version 213, generated 2022-09-16):
+      
 | **UniProtKB_ID**   | **Reference**     |
 |--------------|-----------|
 | P04637 | PMID:35140242       |
