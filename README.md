@@ -26,12 +26,14 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
     *   Content: Grant information (core project number, project fiscal year, direct cost amount), and associated publications (PMIDs). Here we focus on R01 grants (grants supporting a discrete, specified, circumscribed project to be performed by the named investigator(s) in an area representing his or her specific interest and competencies).
     *   Access: Download [list of projects](https://reporter.nih.gov/exporter/projects) and [link tables](https://reporter.nih.gov/exporter/linktables) from NIH RePORTER and/or use [API](https://api.reporter.nih.gov/) to retrieve grant projects and associated publications.
     *   Example grant information (taken from file `FY 2024 RePORTER Project Data`):
+    
       
 | **CORE_PROJECT_NUM**   | **FY**     | **DIRECT_COST_AMT** |
 |--------------|-----------|------------|
 | R01AG072301 | 2024      | 107164        |
 | R01DE029074 |  2024 | 513710       |
-    *   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
+*   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
+
     
 | **PROJECT_NUMBER**   | **PMID**    |
 |--------------|-----------|
