@@ -23,18 +23,37 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 ## Data Sources
 1.  **NIH RePORTER:**
     *   Source: National Institutes of Health (NIH)
-    *   Content: Grant information (award amounts, project periods, PIs), and associated publications (PMIDs). Here we focus on R01 grants.
+    *   Content: Grant information (core project number, project fiscal year, direct cost amount), and associated publications (PMIDs). Here we focus on R01 grants (grants supporting a discrete, specified, circumscribed project to be performed by the named investigator(s) in an area representing his or her specific interest and competencies).
     *   Access: Download [list of projects](https://reporter.nih.gov/exporter/projects) and [link tables](https://reporter.nih.gov/exporter/linktables) from NIH RePORTER and/or use [API](https://api.reporter.nih.gov/) to retrieve grant projects and associated publications.
+    *   Example grant information (taken from file `FY 2024 RePORTER Project Data`):
+| **CORE_PROJECT_NUM**   | **FY**     | **DIRECT_COST_AMT** |
+|--------------|-----------|------------|
+| R01AG072301 | 2024      | 107164        |
+| R01DE029074 |  2024 | 513710       |
+    *   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
+| **PROJECT_NUMBER**   | **PMID**    |
+|--------------|-----------|
+| R01AG072301 | 37880106   |
+| R01AG072301 |  38267628 |
+| R01DE029074 | 38290590 |
+| R01DE029074 | 37756658 |
+
+
 2.  **Gene Ontology Annotation (GAF) files:**
     *   Source: Gene Ontology Consortium members (e.g., UniProt-GOA, MGI, SGD).
-    *   Content: Protein annotations linking proteins (e.g., UniProt IDs) to GO terms, supported by evidence codes and PMIDs. We will focus on experimental annotations as these are always accompanied by their source PubMed articles.
+    *   Content: Protein annotations linking proteins (e.g., UniProt IDs) to GO terms, supported by evidence codes and PMIDs. We will focus on experimental annotations as these are always accompanied by their source PubMed articles and on human proteins.
     *   Access: Publicly available FTP sites hosted by EBI (`ftp.ebi.ac.uk/pub/databases/GO/goa/`) or Gene Ontology Data Archive (`https://release.geneontology.org/`)
+    *   Example data (taken from `goa_human.gaf` version : 
+| **UniProtKB_ID**   | **Reference**     |
+|--------------|-----------|
+| P04637 | PMID:35140242       |
+| P04637 |  PMID:34404770 |
 
 ## Methodology
 1.  **Data Acquisition & Preprocessing:**
-    *   Fetch grant data from NIH RePORTER "Projects" tab. Extract relevant fields: Grant ID, Fiscal Year, Award Amount, Project Start/End Dates, associated PMIDs.
-    *   Download GAF files for relevant organisms (e.g., human, mouse). Parse GAF files to extract (Protein ID, PMID, Evidence Code) and filter for experimental annotations.
-    *   Clean and standardize data (e.g., filter publications based on starting year, use UniProtID as primary identifier).
+    *   Fetch grant data from NIH RePORTER "Projects" tab. Extract relevant fields: `CORE_PROJECT_NUM`, `FY`, `DIRECT_COST_AMT`. Extract associated PMIDs from NIH RePORTER "Link tables" tab to link grant project number to its publications.
+    *   Download GAF files for human proteins. Parse GAF files to extract (Protein ID, Gene Symbol, PMID, Evidence Code) and filter for annotations with experimental evidence code (found at [guide to GO evidence codes](https://geneontology.org/docs/guide-go-evidence-codes/)). GAF files column format can be found [here](https://geneontology.org/docs/go-annotation-file-gaf-format-2.2/)
+    *   Clean and standardize data (e.g., filter publications based on fiscal year, use UniProtID as primary identifier).
 
 2.  **Linking Grants to Proteins:**
     *   **Grant-to-Publication:** Use PMIDs from NIH RePORTER "Link Tables" tab to link grants to publications.
