@@ -32,7 +32,7 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 |--------------|-----------|------------|
 | R01AG072301 | 2024      | 107164        |
 | R01DE029074 |  2024 | 513710       |
-*   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
+   *   Example PubMed IDs of associated publications (taken from file `RePORTER Publications 2024 link tables`):
 
     
 | **PROJECT_NUMBER**   | **PMID**    |
