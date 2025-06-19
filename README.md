@@ -46,7 +46,7 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
 2.  **Gene Ontology Annotation (GAF) files:**
     *   Source: Gene Ontology Consortium members (e.g., UniProt-GOA, MGI, SGD).
     *   Content: Protein annotations linking proteins (e.g., UniProt IDs) to GO terms, supported by evidence codes and PMIDs. We will focus on experimental annotations as these are always accompanied by their source PubMed articles and on human proteins.
-    *   Access: Publicly available FTP sites hosted by EBI (`ftp.ebi.ac.uk/pub/databases/GO/goa/`) or Gene Ontology Data Archive (`https://release.geneontology.org/`)
+    *   Access: Publicly available FTP sites hosted by EBI (`ftp.ebi.ac.uk/pub/databases/GO/goa/`) or [Gene Ontology Data Archive](`https://release.geneontology.org/`)
     *   Example data (taken from `goa_human.gaf` version 213, generated 2022-09-16):
       
 | **UniProtKB_ID**   | **Reference**     |
@@ -93,20 +93,6 @@ We introduce a Hackathon project titled "Funding per Annotated Protein" with the
         *   Input field to search for a protein (by Protein ID or Gene Symbol).
         *   Upon search, display a line chart showing the estimated funding amount attributed to that protein for each year from 2010 onwards.
         *   Option to select which funding apportionment approach's results are displayed (if multiple are fully implemented).
-
-## Evaluation Criteria
-
-Submissions will be evaluated on:
-
-- **Integration of multiple data types** (Hi-C, expression, annotations, etc.)
-- **Clarity**, **documentation**, and **reproducibility** of your analysis
-- **Creativity** in website interface
-
-**Bonus points for**:
-
-- Additional funding database resources (e.g., NSF)
-- Creative funding apportionment approaches
-- Reusable pipeline code
 
 ---
 
